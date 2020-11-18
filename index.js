@@ -1,6 +1,12 @@
-const math = require("./math.js");
+const fs = require("fs");
 
-console.log(math);
-/*console.log(math.substract(3,2));
-console.log(math.multiply(3,2));
-console.log(math.divide(3,0));*/
+fs.writeFile('./prueba.js','const os = require("os"); console.log(os.cpus());',function (err) {
+    if(err){
+        console.log(err);
+    }else{
+        console.log('Archivo creado');
+    }
+    
+});
+
+console.log("Ultima línea de código");
